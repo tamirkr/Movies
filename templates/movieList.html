@@ -1,0 +1,55 @@
+
+<div>
+    <table class="table table-condensed table-hover">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Length</th>
+            <th>Rating</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="movie in $ctrl.movies">
+            <td>{{movie.title}}</td>
+            <td>{{movie.length}}</td>
+            <td>
+                <movie-rating value="movie.rating" max="5" set-rating="$ctrl.setRating(movie,value)">
+                </movie-rating>
+            </td>
+            <td>
+                <button class="btn btn-success" ng-click="$ctrl.upRating(movie)">
+                    <span class="glyphicon glyphicon-plus-sign"></span>
+                </button>
+                <button class="btn btn-info" ng-click="$ctrl.downRating(movie)">
+                    <span class="glyphicon glyphicon-minus-sign"></span>
+                </button>
+
+                <!--Link with an anchor tag-->
+
+                <!--<a ng-link="['Details',{id:movie.id}]" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-zoom-in"></span>
+                </a>-->
+
+                <!--Link with a button ele-->
+
+                <button ng-click="$ctrl.goTo(movie.id)" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-zoom-in"></span>
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <accordion>
+        <accordion-panel heading="panel 1">
+            This is panel 1
+
+        </accordion-panel>
+
+        <accordion-panel  heading="panel 2">
+            This is panel 2
+        </accordion-panel>
+    </accordion>
+</div>
+
+

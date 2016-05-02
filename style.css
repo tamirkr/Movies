@@ -1,0 +1,22 @@
+.glyphicon-star{
+    color: gold;
+}
+
+.panel-default > .panel-heading {
+    color: #fff;
+    background-color: #333;
+    border-color: #ddd;
+}
+
+.panel-body {
+    padding: 15px;
+    background-color: whitesmoke;
+}
+
+accordion .ng-enter{
+    animation: fadeIn 0.5s;
+}
+
+accordion .ng-leave{
+    animation: fadeOut 0.5s;
+}
